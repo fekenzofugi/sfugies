@@ -10,20 +10,25 @@ import { verifyJWT } from "../utils/passwordUtils.js";
 // 1- Check if the user is the user has the token
 // 1.1- Check if the token is valid
 export const authenticateUser = (req, res, next) => {
+
     const {token} = req.cookies;
 
-    if(!token) {
+    if (!token) {
         throw new UnauthenticatedError("authentication invalid");
     };
 
+    // check if the jwt inside of the cookie is valid, then grab the id and the role.
     try {
-        const {userId, role} = verifyJWT(token);
+        const {userId, role} = verifyJWT(token)
+
         const testUser = userId === "6528d3753c6db2258d711f1b";
-        // create req.user
+        // this req.user object is available in all of the controllers with the authMiddleware.
         req.user = {userId, role, testUser};
-        next();
+        // next(): If everything is successfull, next() will pass the next middleware, in this case will pass to the controllers 
+        // down below. Otherwise the request will stop in this middleware.
+        next();        
     } catch (error) {
-        throw new UnauthenticatedError("authentication invalid");
+        throw new UnauthenticatedError("authentication invalid"); 
     };
 };
 

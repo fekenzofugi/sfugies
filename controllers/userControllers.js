@@ -4,6 +4,7 @@ import SubjectModel from "../models/SubjectModel.js";
 
 // 1- get the user that is logged in
 export const getCurrentUser = async (req, res) => {
+
     const id = req.user.userId;
 
     const user = await UserModel.findOne({_id: id});
