@@ -14,6 +14,7 @@ export const loader = async () => {
         const {data} = await customFetch.get("/users/current-user");
         return data;
     } catch (error) {
+        toast.error("error get current user")
         return redirect("/");
     };
 };

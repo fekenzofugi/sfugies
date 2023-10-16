@@ -29,11 +29,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.resolve(__dirname, './public')));
 
 //routes
-import subjectRouter from "./routes/subjectRouter.js";
-app.use("/api/v1/subjects", authenticateUser, subjectRouter);
 
 import authRouter from "./routes/authRouter.js";
 app.use("/api/v1/auth", authRouter);
+
+import subjectRouter from "./routes/subjectRouter.js";
+app.use("/api/v1/subjects", authenticateUser, subjectRouter);
 
 import userRouter from "./routes/userRouter.js";
 app.use("/api/v1/users", authenticateUser, userRouter);
