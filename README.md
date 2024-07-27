@@ -1,3 +1,5 @@
+# sfugies
+
 ## Introduction
 This is a full stack application designed to help students manage their studies. The application includes features for managing courses, assignments, and study schedules. It is built using React for the frontend and Node.js with Express for the backend.
 
