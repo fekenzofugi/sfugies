@@ -82,6 +82,6 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 6. Open a pull request.
 
 ## Contact
-For any inquiries, please contact me at [your-email@example.com](mailto:your-email@example.com).
+For any inquiries, please contact me at [fernandofugihara@gmail.com](mailto:fernandofugihara@gmail.com).
 
 Thank you for using this study management application!
