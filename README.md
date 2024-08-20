@@ -80,8 +80,3 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 4. Commit your changes (`git commit -m 'Add some feature'`).
 5. Push to the branch (`git push origin feature/YourFeature`).
 6. Open a pull request.
-
-## Contact
-For any inquiries, please contact me at [fernandofugihara@gmail.com](mailto:fernandofugihara@gmail.com).
-
-Thank you for using this study management application!
